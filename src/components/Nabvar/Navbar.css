@@ -1,0 +1,61 @@
+.header {
+    font-family: 'PP Neue Montreal', sans-serif;
+    cursor: crosshair;
+    background-color: #FFFFFF; /* Color de fondo de la barra de navegación */
+    /* margin-bottom: 0.8vh; */
+    font-size: smaller;
+}
+
+.header_container {
+    max-height: 10vh;
+    background-color: #FFFFFF; /* Color de fondo del contenedor del header*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.header_logo {
+    max-width: 35%;  
+    height: auto;
+}
+
+.header_navbar {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header_navLink {
+    color: #CCCCCC; /* Color del texto de los enlaces de navegación */
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+  .header_signIn,
+  .header_subscribe {
+    text-decoration: none; /* Quita el subrayado */
+    font-size: smaller;
+  }
+  
+  .header_signIn {
+    color: #000000;
+    font-family: 'PP Neue Montreal book', sans-serif;
+    font-weight: 500;
+    margin-right: 15px; /* Espacio entre "Sign In" y "Subscribe" */
+    margin-right: 3vh;
+  }
+  
+  .header_subscribe {
+    background-color: #FF5532;
+    color: #FFFFFF;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 700;
+  }

@@ -1,0 +1,61 @@
+/* En tu archivo CSS */
+.cartelera-container {
+    max-width: 1100px; /* Ancho máximo similar al del header */
+    margin: 0 auto; /* Centrar el contenido horizontalmente */
+    padding: 20px 0; /* Espacio entre el contenido y los bordes del contenedor */
+    background-color: #FFFFFF; /* Color de fondo del contenedor */
+}
+
+.cartelera-image {
+    flex: 1;
+}
+
+/* En tu archivo CSS */
+.cartelera-image img {
+    max-width: 100%;
+    max-height: 27.1vh; /* Reducido en un 20% (originalmente era 50%) */
+    object-fit: cover; /* Ajustar la imagen para llenar el contenedor */
+}
+
+
+.cartelera-title {
+    flex: 1; /* El título ocupará el espacio restante a la derecha */
+    color: var(--Rojo);
+}
+
+.cartelera-title h6{
+   font-size: 2vh;
+   font-weight: 700;
+}
+
+.cartelera-subtitulo {
+    margin-top: 1vh;
+}
+
+.cartelera-oracion{
+    margin-bottom: 3.2vh;
+}
+
+.cartelera-image2 img {
+    max-width: 100%;
+    max-height: 27.1vh;  /* Reducido en un 20% (originalmente era 50%) */
+    object-fit: cover; /* Ajustar la imagen para llenar el contenedor */
+}
+
+.cartelera-title2 {
+    flex: 1; /* El título ocupará el espacio restante a la derecha */
+    color: var(--Rojo);
+    margin-top: 1vh;
+}
+
+.cartelera-title2 h6 {
+    font-size: 2vh;
+    font-weight: 700;
+ }
+
+ .tiempo {
+    margin-top: -2vh;
+    opacity: 75%;
+    font-size: small;
+ }
+ 

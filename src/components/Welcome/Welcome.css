@@ -1,0 +1,6 @@
+.welcome-container {
+  margin-left: 4vh; /* Márgen izquierdo de 10vh */
+  margin-right: 4vh; /* Márgen derecho de 10vh */
+  margin-top: 2vh; /* Márgen derecho de 10vh */
+  max-height: 100vh;
+}
