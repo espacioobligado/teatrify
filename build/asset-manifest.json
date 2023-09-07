@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/teatrify/static/css/main.a0a37577.css",
+    "main.js": "/teatrify/static/js/main.f79173f9.js",
+    "static/js/787.5820d20b.chunk.js": "/teatrify/static/js/787.5820d20b.chunk.js",
+    "static/media/r.png": "/teatrify/static/media/r.ec3a8b6e2da50bb8599b.png",
+    "static/media/Merriweather-Regular.ttf": "/teatrify/static/media/Merriweather-Regular.da67ca8c38ef44c4773d.ttf",
+    "static/media/Merriweather-Light.ttf": "/teatrify/static/media/Merriweather-Light.43706a2883eb57c79284.ttf",
+    "static/media/Merriweather-BoldItalic.ttf": "/teatrify/static/media/Merriweather-BoldItalic.16252c125b2ba7eaf70a.ttf",
+    "static/media/Merriweather-Italic.ttf": "/teatrify/static/media/Merriweather-Italic.c011994c363b810ae1f6.ttf",
+    "static/media/Merriweather-BlackItalic.ttf": "/teatrify/static/media/Merriweather-BlackItalic.120bcdce9061e8894028.ttf",
+    "static/media/Merriweather-LightItalic.ttf": "/teatrify/static/media/Merriweather-LightItalic.7156ba6851d2a94064dd.ttf",
+    "static/media/Merriweather-Bold.ttf": "/teatrify/static/media/Merriweather-Bold.ae39f743fdcf8f64531e.ttf",
+    "static/media/Merriweather-Black.ttf": "/teatrify/static/media/Merriweather-Black.cfe2aa3843d8cb416e1a.ttf",
+    "static/media/ppneuemontreal-semibolditalic.otf": "/teatrify/static/media/ppneuemontreal-semibolditalic.ef9ee1837108053b9463.otf",
+    "static/media/ppneuemontreal-medium.otf": "/teatrify/static/media/ppneuemontreal-medium.0f34f4714f1b26e0dedc.otf",
+    "static/media/ppneuemontreal-bold.otf": "/teatrify/static/media/ppneuemontreal-bold.34a4eb1a093eb36b2f46.otf",
+    "static/media/ppneuemontreal-book.otf": "/teatrify/static/media/ppneuemontreal-book.cd21cf351f4da50cf75d.otf",
+    "static/media/ppneuemontreal-italic.otf": "/teatrify/static/media/ppneuemontreal-italic.bb9c502e17d3b9edb369.otf",
+    "static/media/ppneuemontreal-thin.otf": "/teatrify/static/media/ppneuemontreal-thin.113878d75d11299845e2.otf",
+    "static/media/OIP.jpeg": "/teatrify/static/media/OIP.4e895d682a250f8c8617.jpeg",
+    "static/media/logo.svg": "/teatrify/static/media/logo.09ab20216b13ed0a245136c08655fca2.svg",
+    "index.html": "/teatrify/index.html",
+    "main.a0a37577.css.map": "/teatrify/static/css/main.a0a37577.css.map",
+    "main.f79173f9.js.map": "/teatrify/static/js/main.f79173f9.js.map",
+    "787.5820d20b.chunk.js.map": "/teatrify/static/js/787.5820d20b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a0a37577.css",
+    "static/js/main.f79173f9.js"
+  ]
+}
