@@ -4,9 +4,11 @@ import Footer from '../Footer/Footer';
 import './Welcome.css';
 
 export const Welcome = () => (
-  <section className="welcome-container">
-    <Navbar />
-    <Cartelera />
+  <>
+    <section className="welcome-container">
+      <Navbar />
+      <Cartelera />
+    </section>
     <Footer />
-  </section>
+  </>
 );
