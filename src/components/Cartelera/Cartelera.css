@@ -1,4 +1,3 @@
-/* En tu archivo CSS */
 .cartelera-container {
     max-width: 1100px; /* Ancho máximo similar al del header */
     margin: 0 auto; /* Centrar el contenido horizontalmente */
@@ -16,7 +15,6 @@
     max-height: 27.1vh; /* Reducido en un 20% (originalmente era 50%) */
     object-fit: cover; /* Ajustar la imagen para llenar el contenedor */
 }
-
 
 .cartelera-title {
     flex: 1; /* El título ocupará el espacio restante a la derecha */
@@ -59,140 +57,108 @@
     font-size: small;
  }
  
- .title,.title2{
+.grid-container {
+display: none;
+}
+
+p{
+    margin: 0;
+    margin-top: 10px;
+}
+.grid-container > div {
+    background-color: #ffffff;
+    text-align: left;
+    font-size: 30px;
+}
+.title{
     color: var(--Rojo);
-    font-family: 'PP Neue Montreal Bold';
     font-size: 1.3vh;
-    margin-top: 27px;  
- }
-
- .cuadrado1b{
-    margin-top: 43px;
- }
-
- .cuadrado2bc h5{
-    margin-top: 30px;
- }
- 
-  
-
- .subtitle{
+    font-weight: 700;
+}
+.subtitle{
     font-family: 'Merriweather Light';
     font-size: 3vh;
     line-height: 2.7vh;
-    margin-bottom: 30px;
- }
- .textoParrafo{
+    text-align: left;
+}
+.textoParrafo{
     font-family: 'PP Neue Montreal Book';
     font-size: 1.5vh;
     line-height: 1.8vh;
-    margin-top: -20px;
- }
- .timePublished{
+}
+.timePublished{
     font-family: 'PP Neue Montreal Thin';
     font-size: 1.1vh;
     letter-spacing: 0.1vh;
-    margin-bottom: 50px;
-    opacity: 0.6;
+    opacity: 0.9;
  }
-
- #titleModififeed{
-    margin-top: -30px;
- }
-
- /* Wut2 */
- .title2{
-    margin-top: 10px;
- }
-
- .cuadrado1{
-    height: 28vh;
+.item1 {
+    border-bottom: 1px solid black; 
+}
+.item2 {
+    grid-column: span 2; /* Hace que el elemento 2 ocupe 2 filas */
+    border-bottom: 1px solid black; 
+}
+.foto1item2{
+    width: 98%;  
+    height: 92%; 
+    object-fit: cover;
+}
+.item3 {
+    grid-row: span 2; /* Hace que el elemento 3 ocupe 2 filas */
+    border-left: 1px solid black; 
+    padding-left: 15px; 
+    border-bottom: 1px solid black; 
+}
+.foto2item3,.foto4item3{
+    max-height: 14vh;
+    min-height: 14vh;
+    max-width: 100%;
+    min-width: 100%;
 }
 
-.cuadrado1b{
-    height: 18.6vh;
+#titleModified{
+    margin-top: -24px;
 }
-
-.cuadrado2{
-    height: 28vh;
+#titleModified2{
+    margin-top: 20px;
 }
-
-.cuadrado2b{
-    height:64.5%;
-    border-right: 2px rgb(0, 0, 0) solid;
-    margin-top: 65px;
+.item4 {
+    border-bottom: 1px solid black; 
 }
- 
-.cuadradoComplemento1{
-    margin-top: -20px;
-}
-/* 270x150 */
-.foto3{
-    margin-right: 10px;
-}
-.cuadrado2bc{
-    margin-top: 32px;
-    margin-left: 17px;
-}
-.cuadrado3{
-    background-color: green;
-    height: 28vh;
-}
-
-.with-border {
-    border-right: 2px solid black; 
-    /* border-bottom: 2px solid black;  */
-    /* margin-bottom: -2px; */
-}
-.with-border2 {
-    border-right: 2px solid black; 
-    padding-right: 15px; 
-    border-bottom: 2px solid black; 
-    margin-bottom: -32px;
-}
- .shamouna{
+.item5 {
     display: flex;
- }
-
-.lineaArribaDeArriba{
-    height: 2px;
-    background-color: black;
-    width: 33.3%;
-    position: absolute;
-    left: 0;
-    margin-left: 40px;
-    margin-top: 30px;
+    justify-content: center;  
+    align-items: center;
+    border-bottom: 1px solid black; 
+}
+.foto3item5{
+    width: 95%;  
+    height: 85%; 
+    object-fit: cover;
+    margin-right: 10px;
+    padding-right: 15px; 
+    border-right: 1px solid black; 
+}
+.item6 {
+    border-bottom: 1px solid black; 
+    margin-top: 15px;
+}
+.item7 {
+    height: 12.6vh;
+}
+.item8 {
+    height: 12.6vh;
+}
+.item9 {
+    height: 12.6vh;
+}
+.item10 {
+    height: 12.6vh;
 }
 
-.lineaArribaDeExtras{
-    height: 2px;
-    background-color: black;
-    width: 96%;
-    position: absolute;
-    left: 0;
-    margin-left: 40px;
-}
-
-.extras{
-    margin-top: 30px;
-    height: 13vh;
-}
-.extras h6{
-    font-family: 'PP Neue Montreal Bold';
-}
-/* .extrash6{
-    font-family: 'Merriweather Light';
-    font-size: 2vh;
-    line-height: 1.7vh;
-    overflow: hidden;
-} */
 .carteleraLaptop{
     display: none;
- }
-
- /* 540x235 */
- .foto1{
-    margin-top: 25px;  
  }
 
 @media (min-width: 1025px) {
@@ -200,11 +166,13 @@
         display: none;
     }
     
-     .carteleraLaptop {
-        margin-top: 5vh;
-        display: flex;
-        flex-direction: column; /* Cambia la dirección de los elementos a vertical */
-        align-items: center; /* Centra los elementos horizontalmente */
-        justify-content: space-between; /* Distribuye uniformemente los elementos verticalmente */
+     .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 50% 30% 20%;
+        max-height: 65vh;
+        background-color: #ffffff;
+        margin-top: 40px;
+        grid-row-gap: 20px;
     }
 }

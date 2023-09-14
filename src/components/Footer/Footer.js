@@ -3,19 +3,21 @@ import './Footer.css';
 import logoImage from '../../assets/logo_preview_rev_2.png';
 import Modal from 'react-modal';  
 
+ 
 const subscribite = (
-  <>
-     Subscribite y  <br />mantenete <br />informado de <br />las noticias actuales
-  </>
-);
-const subscribite2 = (
-  <>
-    Ia tu sabe Ia tu sabe Ia tu sabeIa, tu sabe Ia tsabe Isdda yepoaa r,<br /> tu sabeu sabe u sabe u
-  </>
-)
+    <>
+       Subscribite y  <br />mantenete <br />informado de <br />las noticias actuales
+    </>
+  );
+  const subscribite2 = (
+    <>
+      Ia tu sabe Ia tu sabe Ia tu sabeIa, tu sabe Ia tsabe Isdda yepoaa r,<br /> tu sabeu sabe u sabe u
+    </>
+  )
+
 
 const Footer = () => {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const toggleModal = () => {
     setModalIsOpen(!modalIsOpen);  
@@ -23,7 +25,7 @@ const Footer = () => {
  
   return (
       <>
-        <div className='footer'>
+      <div className='footer'>
               <img
                 src={logoImage}
                 alt="Logo"
@@ -45,42 +47,57 @@ const Footer = () => {
                 </div>
               </Modal>
         </div>
-        
-        <div class="footer2">
-          <div className="container2">
-              <div className="row">
-                  <div className="col-md-2">
-                      <ul className="list-unstyled">
-                          <li>Terms of Use</li>
-                          <li>Privacy</li>
-                          <li>Cookies Policy</li>
-                      </ul>
-                  </div>
-                  <div className="col-md-2">
-                      <ul className="list-unstyled">
-                          <li>Manage Cookies</li>
-                          <li>Accessibility</li>
-                      </ul>
-                  </div>
-                  <div className="col-md-2">
-                      <ul className="list-unstyled social-icons">
-                          <li><i className="fab fa-facebook"></i></li>
-                          <li><i className="fab fa-instagram"></i></li>
-                          <li><i className="fab fa-twitter"></i></li>
-                          <li><i className="fab fa-youtube"></i></li>
-                      </ul>
-                  </div>
-                  <div className="col-md-4 suscrbiteFooter">
-                      <h6>Subscribite y mantenete informado de las noticias actuales</h6>
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam Lorem ipsum dolor sit amet, consectetuer</p>
-                  </div>
-                  <div className="col-md-2 btnSubscribe">
-                      <button className="btn">Subscribe</button>
-                  </div>
-              </div>
-          </div>
 
-        </div>
+        <div class="grid-Footer2">
+            <div class="item1footer2">
+                <ul className="list-unstyled">
+                    <li>Terms of Use</li>
+                    <li>Privacy</li>
+                    <li>Cookies Policy</li>
+                </ul>
+            </div>
+            
+            <div class="item2footer2">
+                <ul className="list-unstyled">
+                    <li>Manage Cookies</li>
+                    <li>Accessibility</li>
+                </ul>
+            </div>
+
+            <div class="item3footer2">
+              <ul className="list-unstyled social-icons">
+                <li>
+                  <a href="https://www.facebook.com" target="_blank">
+                    <i className="fab fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com" target="_blank">
+                    <i className="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.twitter.com" target="_blank">
+                    <i className="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com" target="_blank">
+                    <i className="fab fa-youtube"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>  
+
+            <div class="item4footer2">
+                <h6>Subscribite y mantenete informado de las noticias actuales</h6>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam Lorem ipsum dolor sit amet, consectetuer</p>
+            </div>
+
+            <div class="item5footer2 btnSubscribe">
+                <button className="btn">Subscribe</button>
+            </div>
+         </div>
       </>
   );
 };
