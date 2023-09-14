@@ -160,9 +160,10 @@
     .grid-Footer2 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        max-height:15vh;
-        min-height:15vh;
+        max-height:20vh;
+        min-height:20vh;
         background-color: var(--Rojo);
         color: #FFFFFF;
+        margin-top: 1vh;
     }
   }

@@ -9,6 +9,6 @@ export const Welcome = () => (
       <Navbar />
       <Cartelera />
     </section>
-    <Footer />
+     <Footer />
   </>
 );

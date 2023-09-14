@@ -4,10 +4,13 @@
     background-color: #FFFFFF; /* Color de fondo de la barra de navegación */
     /* margin-bottom: 0.8vh; */
     font-size: smaller;
+    max-height: 10vh;
+    min-height: 10vh;
+    margin-top: 2vh; 
+    margin-bottom: 2vh; 
 }
 
 .header_container {
-    max-height: 10vh;
     background-color: #FFFFFF; /* Color de fondo del contenedor del header*/
     display: flex;
     align-items: center;

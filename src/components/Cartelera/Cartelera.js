@@ -82,6 +82,12 @@ export const Cartelera = () => {
                 <p className='tiempo'>25 Feb 2024</p>
             </div>
              <div class="grid-container">
+
+                <div class="item01"></div>
+                <div class="item02"></div>
+                <div class="item03"></div>
+                <div class="item04"></div>
+
                  <div class="item1">
                     <h6 className='title'>Lorem ipsum</h6>
                     <h5 className='subtitle'>{oracion3}</h5>
