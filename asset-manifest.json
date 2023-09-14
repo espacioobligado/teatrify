@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/teatrify/static/css/main.a0a37577.css",
-    "main.js": "/teatrify/static/js/main.f79173f9.js",
+    "main.css": "/teatrify/static/css/main.f49934a9.css",
+    "main.js": "/teatrify/static/js/main.866525b0.js",
     "static/js/787.5820d20b.chunk.js": "/teatrify/static/js/787.5820d20b.chunk.js",
+    "static/media/foto1.png": "/teatrify/static/media/foto1.278b9b863d0e3525f3e1.png",
     "static/media/r.png": "/teatrify/static/media/r.ec3a8b6e2da50bb8599b.png",
     "static/media/Merriweather-Regular.ttf": "/teatrify/static/media/Merriweather-Regular.da67ca8c38ef44c4773d.ttf",
     "static/media/Merriweather-Light.ttf": "/teatrify/static/media/Merriweather-Light.43706a2883eb57c79284.ttf",
@@ -18,15 +19,18 @@
     "static/media/ppneuemontreal-book.otf": "/teatrify/static/media/ppneuemontreal-book.cd21cf351f4da50cf75d.otf",
     "static/media/ppneuemontreal-italic.otf": "/teatrify/static/media/ppneuemontreal-italic.bb9c502e17d3b9edb369.otf",
     "static/media/ppneuemontreal-thin.otf": "/teatrify/static/media/ppneuemontreal-thin.113878d75d11299845e2.otf",
+    "static/media/foto4.png": "/teatrify/static/media/foto4.d37ffcbe37cdf9ebe360.png",
+    "static/media/foto3.png": "/teatrify/static/media/foto3.012e85bad8027e831fed.png",
+    "static/media/foto2.png": "/teatrify/static/media/foto2.21bc082eb97ac2db66d0.png",
     "static/media/OIP.jpeg": "/teatrify/static/media/OIP.4e895d682a250f8c8617.jpeg",
     "static/media/logo.svg": "/teatrify/static/media/logo.09ab20216b13ed0a245136c08655fca2.svg",
     "index.html": "/teatrify/index.html",
-    "main.a0a37577.css.map": "/teatrify/static/css/main.a0a37577.css.map",
-    "main.f79173f9.js.map": "/teatrify/static/js/main.f79173f9.js.map",
+    "main.f49934a9.css.map": "/teatrify/static/css/main.f49934a9.css.map",
+    "main.866525b0.js.map": "/teatrify/static/js/main.866525b0.js.map",
     "787.5820d20b.chunk.js.map": "/teatrify/static/js/787.5820d20b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0a37577.css",
-    "static/js/main.f79173f9.js"
+    "static/css/main.f49934a9.css",
+    "static/js/main.866525b0.js"
   ]
 }
