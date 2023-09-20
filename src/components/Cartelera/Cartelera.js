@@ -50,7 +50,9 @@ const oracion3 = (
   
     let formattedDifference = '';
   
-    if (differenceInMinutes < 60) {
+    if (differenceInMinutes == 1) {
+      formattedDifference = `${differenceInMinutes} minuto`;
+    } else if(differenceInMinutes < 60) {
       formattedDifference = `${differenceInMinutes} minutos`;
     } else if (differenceInMinutes < 1440) {
       const differenceInHours = Math.floor(differenceInMinutes / 60);
@@ -197,32 +199,119 @@ export const Cartelera = () => {
             // _________________
     return (
       <>
-            <div className="cartelera-container">
-                <div className="cartelera-title">
-                    <h6 className="we">{titulo}</h6>
+            <div>
+                <div>
+                    {primerElemento ? (
+                     <>
+                      <h6 className='title'>{primerElemento.titulo}</h6>
+                      <h5 className='subtitle'>{primerElemento.subtitulo}</h5>
+                      <img className="foto1item2" src={primerElemento.foto} alt="Kinky Rules picture" />
+                      <p className='textoParrafo'>{primerElemento.texto}</p>
+                      <p className='timePublished'>hace {primerElemento.diferenciaDeTiempo}</p>
+                     </>
+                    ) : (
+                      <p>Cargando datos...</p>
+                    )}
                 </div>
-                <div className="cartelera-image">
-                    <img src={carteleraImage} alt="Cartelera" />
+                <div>
+                    {segundoElemento ? (
+                     <>
+                      <h6 className='title'>{segundoElemento.titulo}</h6>
+                      <h5 className='subtitle'>{segundoElemento.subtitulo}</h5>
+                      <img className="foto1item2" src={segundoElemento.foto} alt="Kinky Rules picture" />
+                      <p className='textoParrafo'>{segundoElemento.texto}</p>
+                      <p className='timePublished'>hace {segundoElemento.diferenciaDeTiempo}</p>
+                     </>
+                    ) : (
+                      <p>Cargando datos...</p>
+                    )}
                 </div>
-                <div className="cartelera-subtitulo">
-                    <h4 className="we">{subtitulo}</h4>
+                <div>
+                    {tercerElemento ? (
+                     <>
+                      <h6 className='title'>{tercerElemento.titulo}</h6>
+                      <h5 className='subtitle'>{tercerElemento.subtitulo}</h5>
+                      <img className="foto1item2" src={tercerElemento.foto} alt="Kinky Rules picture" />
+                      <p className='textoParrafo'>{tercerElemento.texto}</p>
+                      <p className='timePublished'>hace {tercerElemento.diferenciaDeTiempo}</p>
+                     </>
+                    ) : (
+                      <p>Cargando datos...</p>
+                    )}
                 </div>
-                <div className="cartelera-oracion">
-                    <h5 className="we">{oracion}</h5>
+                <div>
+                    {quintoElemento ? (
+                     <>
+                      <h6 className='title'>{quintoElemento.titulo}</h6>
+                      <h5 className='subtitle'>{quintoElemento.subtitulo}</h5>
+                      <img className="foto1item2" src={quintoElemento.foto} alt="Kinky Rules picture" />
+                      <p className='textoParrafo'>{quintoElemento.texto}</p>
+                      <p className='timePublished'>hace {quintoElemento.diferenciaDeTiempo}</p>
+                     </>
+                    ) : (
+                      <p>Cargando datos...</p>
+                    )}
                 </div>
-                <div className="cartelera-title2">
-                    <h6 className="we">{titulo}</h6>
+                <div>
+                    {cuartoElemento ? (
+                     <>
+                      <h6 className='title'>{cuartoElemento.titulo}</h6>
+                      <h5 className='subtitle'>{cuartoElemento.subtitulo}</h5>
+                      <p className='textoParrafo'>{cuartoElemento.texto}</p>
+                      <p className='timePublished'>hace {cuartoElemento.diferenciaDeTiempo}</p>
+                     </>
+                    ) : (
+                      <p>Cargando datos...</p>
+                    )}
                 </div>
-                <div className="cartelera-image2">
-                    <img src={carteleraImage2} alt="Cartelera2" />
+                <div>
+                    {sextoElemento ? (
+                     <>
+                      <h6 className='title'>{sextoElemento.titulo}</h6>
+                      <h5 className='subtitle'>{sextoElemento.subtitulo}</h5>
+                      <p className='textoParrafo'>{sextoElemento.texto}</p>
+                      <p className='timePublished'>hace {sextoElemento.diferenciaDeTiempo}</p>
+                     </>
+                    ) : (
+                      <p>Cargando datos...</p>
+                    )}
                 </div>
-                <div className="cartelera-subtitulo">
-                    <h4 className="we">{subtitulo}</h4>
+                <div>
+                    {septimoElemento ? (
+                     <>
+                      <h6 className='title'>{septimoElemento.titulo}</h6>
+                      <h5 className='subtitle'>{septimoElemento.subtitulo}</h5>
+                      <p className='textoParrafo'>{septimoElemento.texto}</p>
+                      <p className='timePublished'>hace {septimoElemento.diferenciaDeTiempo}</p>
+                     </>
+                    ) : (
+                      <p>Cargando datos...</p>
+                    )}
                 </div>
-                <div className="cartelera-oracion">
-                    <h5 className="we">{oracion2}</h5>
+                <div>
+                    {octavoElemento ? (
+                     <>
+                      <h6 className='title'>{octavoElemento.titulo}</h6>
+                      <h5 className='subtitle'>{octavoElemento.subtitulo}</h5>
+                      <p className='textoParrafo'>{octavoElemento.texto}</p>
+                      <p className='timePublished'>hace {octavoElemento.diferenciaDeTiempo}</p>
+                     </>
+                    ) : (
+                      <p>Cargando datos...</p>
+                    )}
                 </div>
-                <p className='tiempo'>25 Feb 2024</p>
+                <div>
+                    {novenoElemento ? (
+                     <>
+                      <h6 className='title'>{novenoElemento.titulo}</h6>
+                      <h5 className='subtitle'>{novenoElemento.subtitulo}</h5>
+                      <p className='textoParrafo'>{novenoElemento.texto}</p>
+                      <p className='timePublished'>hace {novenoElemento.diferenciaDeTiempo}</p>
+                     </>
+                    ) : (
+                      <p>Cargando datos...</p>
+                    )}
+                </div>
             </div>
              <div className="grid-container">
 
@@ -250,7 +339,7 @@ export const Cartelera = () => {
                       <h6 className='title'>{primerElemento.titulo}</h6>
                       <h5 className='subtitle'>{primerElemento.subtitulo}</h5>
                       <p className='textoParrafo'>{primerElemento.texto}</p>
-                      <p className='timePublished'>{primerElemento.diferenciaDeTiempo}</p>
+                      <p className='timePublished'>hace {primerElemento.diferenciaDeTiempo}</p>
                      </>
                     ) : (
                       <p>Cargando datos...</p>
@@ -275,18 +364,18 @@ export const Cartelera = () => {
                         <img className='foto2item3' src={segundoElemento.foto} alt="Cartelera" />          
                         <h5 className='subtitle'>{segundoElemento.subtitulo}</h5>
                         <p className='textoParrafo'>{segundoElemento.texto}</p>
-                        <p className='timePublished'>{segundoElemento.diferenciaDeTiempo}</p>
+                        <p className='timePublished'>hace {segundoElemento.diferenciaDeTiempo}</p>
                         <h6 className='title'  id='titleModified2'>{tercerElemento.titulo}</h6>
                         <img className='foto4item3' src={tercerElemento.foto} alt="Salta que la vida es una fiesta" />
                         <h5 className='subtitle' id="subtitleModified">{tercerElemento.subtitulo}</h5>
                         <p className='textoParrafo'>{tercerElemento.texto}</p>
-                        <p className='timePublished'>{tercerElemento.diferenciaDeTiempo}</p>  
+                        <p className='timePublished'>hace {tercerElemento.diferenciaDeTiempo}</p>  
                     </div>  
                  <div className="item4">
                     <h6 className='title'>{cuartoElemento.titulo}</h6>
                     <h5 className='subtitle'>{cuartoElemento.subtitulo}</h5>
                     <p className='textoParrafo'>{cuartoElemento.texto}</p>
-                    <p className='timePublished'>{cuartoElemento.diferenciaDeTiempo}</p>
+                    <p className='timePublished'>hace {cuartoElemento.diferenciaDeTiempo}</p>
                  </div>
                  <div className="item5 with-border">
                     <img className='foto3item5' src={quintoElemento.foto} alt="A cocochito" />
@@ -295,31 +384,31 @@ export const Cartelera = () => {
                     <h6 className='title'>{quintoElemento.titulo}</h6>
                     <h5 className='subtitle' id="subtitleItem6Modified">{quintoElemento.subtitulo}</h5>
                     <p className='textoParrafo'>{quintoElemento.texto}</p>
-                    <p className='timePublished'>{quintoElemento.diferenciaDeTiempo}</p>
+                    <p className='timePublished'>hace {quintoElemento.diferenciaDeTiempo}</p>
                  </div>
                  <div className="item7">
                     <h6 className='title'>{sextoElemento.titulo}</h6>
                     <h5>{sextoElemento.subtitulo}</h5>
                     <p className='textoParrafo'>{sextoElemento.texto}</p>
-                    <p className='timePublished alignDroit'>{sextoElemento.diferenciaDeTiempo}</p>
+                    <p className='timePublished alignDroit'>hace {sextoElemento.diferenciaDeTiempo}</p>
                  </div>
                  <div className="item8">
                     <h6 className='title'>{septimoElemento.titulo}</h6>
                     <h5>{septimoElemento.subtitulo}</h5>
                     <p className='textoParrafo'>{septimoElemento.texto}</p>
-                    <p className='timePublished alignDroit'>{septimoElemento.diferenciaDeTiempo}</p>
+                    <p className='timePublished alignDroit'>hace {septimoElemento.diferenciaDeTiempo}</p>
                  </div>
                  <div className="item9">
                     <h6 className='title'>{octavoElemento.titulo}</h6>
                     <h5>{octavoElemento.subtitulo}</h5>
                     <p className='textoParrafo'>{octavoElemento.texto}</p>
-                    <p className='timePublished alignDroit'>{octavoElemento.diferenciaDeTiempo}</p>
+                    <p className='timePublished alignDroit'>hace {octavoElemento.diferenciaDeTiempo}</p>
                  </div>
                  <div className="item10">
                     <h6 className='title'>{novenoElemento.titulo}</h6>
                     <h5>{novenoElemento.subtitulo}</h5> 
                     <p className='textoParrafo'>{novenoElemento.texto}</p>
-                    <p className='timePublished alignDroit'>{novenoElemento.diferenciaDeTiempo}</p>
+                    <p className='timePublished alignDroit'>hace {novenoElemento.diferenciaDeTiempo}</p>
                  </div>
             </div>
             </>

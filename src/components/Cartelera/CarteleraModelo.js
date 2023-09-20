@@ -9,7 +9,7 @@ import foto4 from '../../assets/foto4.png';
 import { updateDoc, doc } from 'firebase/firestore'; // Importa las funciones necesarias de Firebase
 import { getStorage, ref, getDownloadURL,uploadBytes } from 'firebase/storage'; // Importa las funciones necesarias de Firebase Storage
 
-import { getFirestore, collection, getDocs,getDoc,DocumentReference  } from 'firebase/firestore';  
+import { getFirestore, collection, getDocs,getDoc,DocumentReference,serverTimestamp   } from 'firebase/firestore';  
 import { app } from '../../firebase/firebase';
 
 
@@ -390,6 +390,7 @@ const handleSaveClick = async (id) => {
      titulo:  editedTitle1,
      subtitulo: editedSubtitle1,
      texto: editedText1, 
+     tiempo: serverTimestamp(), 
     };
     
     await updateDoc(docRef, updatedData1);

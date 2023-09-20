@@ -38,9 +38,7 @@
     text-transform: uppercase;
     cursor: pointer;
 }
-.header_buttons{
-  margin-top: 20px;
-}
+ 
 .header_search{
   display: inline;
   margin-right: 2vh;
