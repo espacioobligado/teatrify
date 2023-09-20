@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/teatrify/static/css/main.bb25e738.css",
-    "main.js": "/teatrify/static/js/main.6588d997.js",
+    "main.css": "/teatrify/static/css/main.fdf4d5d7.css",
+    "main.js": "/teatrify/static/js/main.cb9a9078.js",
     "static/js/787.5820d20b.chunk.js": "/teatrify/static/js/787.5820d20b.chunk.js",
     "static/media/foto1.png": "/teatrify/static/media/foto1.278b9b863d0e3525f3e1.png",
     "static/media/r.png": "/teatrify/static/media/r.ec3a8b6e2da50bb8599b.png",
@@ -23,14 +23,15 @@
     "static/media/foto3.png": "/teatrify/static/media/foto3.012e85bad8027e831fed.png",
     "static/media/foto2.png": "/teatrify/static/media/foto2.21bc082eb97ac2db66d0.png",
     "static/media/OIP.jpeg": "/teatrify/static/media/OIP.4e895d682a250f8c8617.jpeg",
-    "static/media/logo.svg": "/teatrify/static/media/logo.09ab20216b13ed0a245136c08655fca2.svg",
     "index.html": "/teatrify/index.html",
-    "main.bb25e738.css.map": "/teatrify/static/css/main.bb25e738.css.map",
-    "main.6588d997.js.map": "/teatrify/static/js/main.6588d997.js.map",
+    "static/media/logo.svg": "/teatrify/static/media/logo.09ab20216b13ed0a245136c08655fca2.svg",
+    "static/media/coleccion2.txt": "/teatrify/static/media/coleccion2.2d1b6fa53ae8e662e732.txt",
+    "main.fdf4d5d7.css.map": "/teatrify/static/css/main.fdf4d5d7.css.map",
+    "main.cb9a9078.js.map": "/teatrify/static/js/main.cb9a9078.js.map",
     "787.5820d20b.chunk.js.map": "/teatrify/static/js/787.5820d20b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb25e738.css",
-    "static/js/main.6588d997.js"
+    "static/css/main.fdf4d5d7.css",
+    "static/js/main.cb9a9078.js"
   ]
 }

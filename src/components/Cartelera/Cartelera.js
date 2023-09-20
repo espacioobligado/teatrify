@@ -292,29 +292,34 @@ export const Cartelera = () => {
                     <img className='foto3item5' src={quintoElemento.foto} alt="A cocochito" />
                  </div>
                  <div className="item6">
-                    <h6 className='subtitle' id="subtitleItem6Modified">{quintoElemento.subtitulo}</h6>
+                    <h6 className='title'>{quintoElemento.titulo}</h6>
+                    <h5 className='subtitle' id="subtitleItem6Modified">{quintoElemento.subtitulo}</h5>
                     <p className='textoParrafo'>{quintoElemento.texto}</p>
                     <p className='timePublished'>{quintoElemento.diferenciaDeTiempo}</p>
                  </div>
                  <div className="item7">
-                    <h6>{sextoElemento.subtitulo}</h6>
+                    <h6 className='title'>{sextoElemento.titulo}</h6>
+                    <h5>{sextoElemento.subtitulo}</h5>
                     <p className='textoParrafo'>{sextoElemento.texto}</p>
-                    <p className='timePublished'>{sextoElemento.diferenciaDeTiempo}</p>
+                    <p className='timePublished alignDroit'>{sextoElemento.diferenciaDeTiempo}</p>
                  </div>
                  <div className="item8">
-                    <h6>{septimoElemento.subtitulo}</h6>
+                    <h6 className='title'>{septimoElemento.titulo}</h6>
+                    <h5>{septimoElemento.subtitulo}</h5>
                     <p className='textoParrafo'>{septimoElemento.texto}</p>
-                    <p className='timePublished'>{septimoElemento.diferenciaDeTiempo}</p>
+                    <p className='timePublished alignDroit'>{septimoElemento.diferenciaDeTiempo}</p>
                  </div>
                  <div className="item9">
-                    <h6>{octavoElemento.subtitulo}</h6>
+                    <h6 className='title'>{octavoElemento.titulo}</h6>
+                    <h5>{octavoElemento.subtitulo}</h5>
                     <p className='textoParrafo'>{octavoElemento.texto}</p>
-                    <p className='timePublished'>{octavoElemento.diferenciaDeTiempo}</p>
+                    <p className='timePublished alignDroit'>{octavoElemento.diferenciaDeTiempo}</p>
                  </div>
                  <div className="item10">
-                    <h6>{novenoElemento.subtitulo}</h6> 
+                    <h6 className='title'>{novenoElemento.titulo}</h6>
+                    <h5>{novenoElemento.subtitulo}</h5> 
                     <p className='textoParrafo'>{novenoElemento.texto}</p>
-                    <p className='timePublished'>{novenoElemento.diferenciaDeTiempo}</p>
+                    <p className='timePublished alignDroit'>{novenoElemento.diferenciaDeTiempo}</p>
                  </div>
             </div>
             </>

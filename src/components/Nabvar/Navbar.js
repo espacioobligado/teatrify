@@ -61,7 +61,7 @@ export const Navbar = () => {
                   <button id="searchButton">Buscar</button>
                 </div>
               </div>
-              <Link to={"/signin"} className="header_signIn">Sign In</Link>
+              <Link to={"/admin"} className="header_signIn">Sign In</Link>
               <Link to={"/subscribe"} className="header_subscribe">Subscribe</Link>
             </div>
           </div>

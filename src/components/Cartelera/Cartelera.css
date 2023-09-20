@@ -117,13 +117,14 @@ p{
     min-height: 14vh;
     max-width: 25vh!important;
     min-width: 25vh!important;
+    margin-bottom: 1vh!important;
 }
 
 #titleModified{
     margin-top: -24px;
 }
 #titleModified2{
-    margin-top: 20px;
+    margin-top: 5px!important;
 }
 .item4 {
     border-bottom: 1px solid black; 
@@ -149,18 +150,52 @@ p{
 .item7 {
     margin-top:1vh ;
     height: 12.6vh;
+    margin-right: 10px; 
+}
+.item7 h5{
+    margin-top:-1vh ;
+}
+.item7 p{
+    margin-top:-0.5vh ;
+}
+.alignDroit{
+    text-align: end;
+    margin-right: 20px;
+    margin-top: 1px!important;
 }
 .item8 {
     margin-top:1vh ;
     height: 12.6vh;
+    margin-right: 10px; 
+}
+.item8 h5{
+    margin-top:-1vh ;
+}
+.item8 p{
+    margin-top:-0.5vh ;
 }
 .item9 {
     margin-top:1vh ;
     height: 12.6vh;
+    margin-right: 10px; 
+}
+.item9 h5{
+    margin-top:-1vh ;
+}
+.item9 p{
+    margin-top:-0.5vh;
+    align-items: flex-end;
 }
 .item10 {
     margin-top:1vh ;
     height: 12.6vh;
+    margin-right: 10px; 
+}
+.item10 h5{
+    margin-top:-1vh ;
+}
+.item10 p{
+    margin-top:-0.5vh ;
 }
 
 .carteleraLaptop{

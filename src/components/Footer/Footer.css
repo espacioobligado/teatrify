@@ -119,6 +119,10 @@
     padding: 10px;
     color: #FFFFFF;
   }
+  .st1column{
+    font-size: 1.3vh!important;
+    margin-top: 30px;
+  }
   
   a {
     text-decoration: none;

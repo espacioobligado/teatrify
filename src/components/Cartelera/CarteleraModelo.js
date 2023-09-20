@@ -246,15 +246,19 @@ export const CarteleraModelo = () => {
   const [editedSubtitle5, setEditedSubtitle5] = useState('');
   const [editedText5, setEditedText5] = useState('');
 
+  const [editedTitle6, setEditedTitle6] = useState('');
   const [editedSubtitle6, setEditedSubtitle6] = useState('');
   const [editedText6, setEditedText6] = useState('');
 
+  const [editedTitle7, setEditedTitle7] = useState('');
   const [editedSubtitle7, setEditedSubtitle7] = useState('');
   const [editedText7, setEditedText7] = useState('');
 
+  const [editedTitle8, setEditedTitle8] = useState('');
   const [editedSubtitle8, setEditedSubtitle8] = useState('');
   const [editedText8, setEditedText8] = useState('');
 
+  const [editedTitle9, setEditedTitle9] = useState('');
   const [editedSubtitle9, setEditedSubtitle9] = useState('');
   const [editedText9, setEditedText9] = useState('');
   
@@ -293,6 +297,7 @@ export const CarteleraModelo = () => {
 
   useEffect(() => {
     if (editMode5) {
+      setEditedTitle5(quintoElemento.titulo);
       setEditedSubtitle5(quintoElemento.subtitulo);
       setEditedText5(quintoElemento.texto);
     }
@@ -300,6 +305,7 @@ export const CarteleraModelo = () => {
 
   useEffect(() => {
     if (editMode6) {
+      setEditedTitle6(sextoElemento.titulo);
       setEditedSubtitle6(sextoElemento.subtitulo);
       setEditedText6(sextoElemento.texto);
     }
@@ -307,6 +313,7 @@ export const CarteleraModelo = () => {
 
   useEffect(() => {
     if (editMode7) {
+      setEditedTitle7(septimoElemento.titulo);
       setEditedSubtitle7(septimoElemento.subtitulo);
       setEditedText7(septimoElemento.texto);
     }
@@ -314,6 +321,7 @@ export const CarteleraModelo = () => {
 
   useEffect(() => {
     if (editMode8) {
+      setEditedTitle8(octavoElemento.titulo);
       setEditedSubtitle8(octavoElemento.subtitulo);
       setEditedText8(octavoElemento.texto);
     }
@@ -321,6 +329,7 @@ export const CarteleraModelo = () => {
 
   useEffect(() => {
     if (editMode9) {
+      setEditedTitle9(novenoElemento.titulo);
       setEditedSubtitle9(novenoElemento.subtitulo);
       setEditedText9(novenoElemento.texto);
     }
@@ -424,6 +433,7 @@ const handleSaveClick = async (id) => {
       console.log('pasando')
  
      const updatedData5 = {
+      titulo:  editedTitle5,
        subtitulo: editedSubtitle5,
        texto: editedText5, 
       };
@@ -435,6 +445,7 @@ const handleSaveClick = async (id) => {
    if(elementoEncontrado.id == 6){
 
     const updatedData6 = {
+      titulo:  editedTitle6,
       subtitulo: editedSubtitle6,
       texto: editedText6, 
      };
@@ -445,6 +456,7 @@ const handleSaveClick = async (id) => {
    if(elementoEncontrado.id == 7){
 
     const updatedData7 = {
+      titulo:  editedTitle7,
       subtitulo: editedSubtitle7,
       texto: editedText7, 
      };
@@ -455,6 +467,7 @@ const handleSaveClick = async (id) => {
    if(elementoEncontrado.id == 8){
 
     const updatedData8 = {
+      titulo:  editedTitle8,
       subtitulo: editedSubtitle8,
       texto: editedText8, 
      };
@@ -465,6 +478,7 @@ const handleSaveClick = async (id) => {
    if(elementoEncontrado.id == 9){
 
     const updatedData9 = {
+      titulo:  editedTitle9,
       subtitulo: editedSubtitle9,
       texto: editedText9, 
      };
@@ -844,6 +858,11 @@ const handleFileChange4 = async(e) => {
                     </button>
                     {editMode5 ? (
                       <>
+                      <input
+                        type="text"
+                        value={editedTitle5}
+                        onChange={(e) => setEditedTitle5(e.target.value)}
+                      />
                         <input
                           type="text"
                           value={editedSubtitle5}
@@ -857,7 +876,8 @@ const handleFileChange4 = async(e) => {
                       </>
                       ) : (
                       <>
-                        <h6 className='subtitle' id="subtitleItem6Modified">{quintoElemento.subtitulo}</h6>
+                        <h6>{quintoElemento.titulo}</h6> 
+                        <h5 className='subtitle' id="subtitleItem6Modified">{quintoElemento.subtitulo}</h5>
                         <p className='textoParrafo'>{quintoElemento.texto}</p>
                         <p className='timePublished'>{quintoElemento.diferenciaDeTiempo}</p>
                       </>
@@ -871,6 +891,11 @@ const handleFileChange4 = async(e) => {
                   </button>
                   {editMode6 ? (
                     <>
+                    <input
+                        type="text"
+                        value={editedTitle6}
+                        onChange={(e) => setEditedTitle6(e.target.value)}
+                      />
                       <input
                         type="text"
                         value={editedSubtitle6}
@@ -884,7 +909,8 @@ const handleFileChange4 = async(e) => {
                     </>
                   ) : (
                     <>
-                      <h6>{sextoElemento.subtitulo}</h6>
+                      <h6>{sextoElemento.titulo}</h6> 
+                      <h5>{sextoElemento.subtitulo}</h5>
                       <p className='textoParrafo'>{sextoElemento.texto}</p>
                       <p className='timePublished'>{sextoElemento.diferenciaDeTiempo}</p>
                     </>
@@ -898,6 +924,11 @@ const handleFileChange4 = async(e) => {
                 </button>
                  {editMode7 ? (
                     <>
+                    <input
+                        type="text"
+                        value={editedTitle7}
+                        onChange={(e) => setEditedTitle7(e.target.value)}
+                      />
                       <input
                         type="text"
                         value={editedSubtitle7}
@@ -911,7 +942,8 @@ const handleFileChange4 = async(e) => {
                     </>
                   ) : (
                     <>
-                      <h6>{septimoElemento.subtitulo}</h6>
+                      <h6>{septimoElemento.titulo}</h6> 
+                      <h5>{septimoElemento.subtitulo}</h5>
                       <p className='textoParrafo'>{septimoElemento.texto}</p>
                       <p className='timePublished'>{septimoElemento.diferenciaDeTiempo}</p>
                     </>
@@ -926,6 +958,11 @@ const handleFileChange4 = async(e) => {
                 </button>
                  {editMode8 ? (
                     <>
+                    <input
+                        type="text"
+                        value={editedTitle8}
+                        onChange={(e) => setEditedTitle8(e.target.value)}
+                      />
                       <input
                         type="text"
                         value={editedSubtitle8}
@@ -939,7 +976,8 @@ const handleFileChange4 = async(e) => {
                     </>
                   ) : (
                     <>
-                      <h6>{octavoElemento.subtitulo}</h6>
+                      <h6>{octavoElemento.titulo}</h6> 
+                      <h5>{octavoElemento.subtitulo}</h5>
                       <p className='textoParrafo'>{octavoElemento.texto}</p>
                       <p className='timePublished'>{octavoElemento.diferenciaDeTiempo}</p>
                     </>
@@ -954,6 +992,11 @@ const handleFileChange4 = async(e) => {
                 </button>
                  {editMode9 ? (
                     <>
+                    <input
+                        type="text"
+                        value={editedTitle9}
+                        onChange={(e) => setEditedTitle9(e.target.value)}
+                      />
                       <input
                         type="text"
                         value={editedSubtitle9}
@@ -967,7 +1010,8 @@ const handleFileChange4 = async(e) => {
                     </>
                   ) : (
                     <>
-                    <h6>{novenoElemento.subtitulo}</h6> 
+                    <h6>{novenoElemento.titulo}</h6> 
+                    <h5>{novenoElemento.subtitulo}</h5> 
                     <p className='textoParrafo'>{novenoElemento.texto}</p>
                     <p className='timePublished'>{novenoElemento.diferenciaDeTiempo}</p>
                     </>

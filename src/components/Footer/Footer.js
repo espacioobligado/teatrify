@@ -50,7 +50,7 @@ const Footer = () => {
 
         <div className="grid-Footer2">
             <div className="item1footer2">
-                <ul className="list-unstyled">
+                <ul className="list-unstyled st1column">
                     <li>Terms of Use</li>
                     <li>Privacy</li>
                     <li>Cookies Policy</li>
@@ -58,7 +58,7 @@ const Footer = () => {
             </div>
             
             <div className="item2footer2">
-                <ul className="list-unstyled">
+                <ul className="list-unstyled st1column">
                     <li>Manage Cookies</li>
                     <li>Accessibility</li>
                 </ul>
