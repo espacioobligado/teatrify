@@ -1,0 +1,8 @@
+{
+  "Id":"1",
+  "titulo": "Lorem ipsum",
+  "subtitulo": "4 planes obligatorios de temática QUEER en Madrid",
+  "foto": "imagen.jpg",
+  "texto": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",
+  "tiempo": "2023-09-14T10:00:00.000Z"
+}

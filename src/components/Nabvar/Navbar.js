@@ -72,7 +72,7 @@ export const Navbar = () => {
               <a href='#'>Lorem Ipsum</a>
               <a href='#'>Lorem Ipsum</a>
             </div>
-            <div class="linea"></div>
+            <div className="linea"></div>
         </header>
     )
 }

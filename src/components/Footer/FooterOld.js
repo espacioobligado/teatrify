@@ -46,7 +46,7 @@ const Footer = () => {
               </Modal>
         </div>
         
-        <div class="footer2">
+        <div className="footer2">
           <div className="container2">
               <div className="row">
                   <div className="col-md-2">

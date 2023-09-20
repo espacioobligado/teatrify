@@ -13,7 +13,7 @@
 .cartelera-image img {
     max-width: 100%;
     max-height: 27.1vh; /* Reducido en un 20% (originalmente era 50%) */
-    object-fit: contain; /* Ajustar la imagen para llenar el contenedor */
+    object-fit: cover; /* Ajustar la imagen para llenar el contenedor */
 }
 
 .cartelera-title {
@@ -37,7 +37,7 @@
 .cartelera-image2 img {
     max-width: 100%;
     max-height: 27.1vh;  /* Reducido en un 20% (originalmente era 50%) */
-    object-fit: contain; /* Ajustar la imagen para llenar el contenedor */
+    object-fit: cover; /* Ajustar la imagen para llenar el contenedor */
 }
 
 .cartelera-title2 {
@@ -94,7 +94,6 @@ p{
  }
 .item1 {
     border-bottom: 1px solid black; 
-    background-color: rgb(45, 143, 26);
 }
 .item2 {
     grid-column: span 2; /* Hace que el elemento 2 ocupe 2 filas */
@@ -103,8 +102,7 @@ p{
 .foto1item2{
     width: 98%;  
     height: 92%; 
-    object-fit: contain; 
-    /* cover */
+    object-fit: cover;
 }
 .item3 {
     grid-row: span 2; /* Hace que el elemento 3 ocupe 2 filas */
@@ -115,8 +113,8 @@ p{
 .foto2item3,.foto4item3{
     max-height: 14vh;
     min-height: 14vh;
-    max-width: 25vh!important;
-    min-width: 25vh!important;
+    max-width: 100%;
+    min-width: 100%;
 }
 
 #titleModified{
@@ -137,7 +135,7 @@ p{
 .foto3item5{
     width: 95%;  
     height: 85%; 
-    object-fit: contain;
+    object-fit: cover;
     margin-right: 10px;
     padding-right: 15px; 
     border-right: 1px solid black; 
@@ -147,19 +145,15 @@ p{
     margin-top: 15px;
 }
 .item7 {
-    margin-top:1vh ;
     height: 12.6vh;
 }
 .item8 {
-    margin-top:1vh ;
     height: 12.6vh;
 }
 .item9 {
-    margin-top:1vh ;
     height: 12.6vh;
 }
 .item10 {
-    margin-top:1vh ;
     height: 12.6vh;
 }
 

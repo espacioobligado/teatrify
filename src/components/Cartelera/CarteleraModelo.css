@@ -103,8 +103,7 @@ p{
 .foto1item2{
     width: 98%;  
     height: 92%; 
-    object-fit: contain; 
-    /* cover */
+    object-fit: contain;
 }
 .item3 {
     grid-row: span 2; /* Hace que el elemento 3 ocupe 2 filas */
@@ -115,8 +114,8 @@ p{
 .foto2item3,.foto4item3{
     max-height: 14vh;
     min-height: 14vh;
-    max-width: 25vh!important;
-    min-width: 25vh!important;
+    max-width: 100%;
+    min-width: 100%;
 }
 
 #titleModified{
@@ -146,21 +145,21 @@ p{
     border-bottom: 1px solid black; 
     margin-top: 15px;
 }
-.item7 {
-    margin-top:1vh ;
+.item7modelo {
     height: 12.6vh;
+    margin-top: 20vh;
 }
-.item8 {
-    margin-top:1vh ;
+.item8modelo {
     height: 12.6vh;
+    margin-top: 20vh;
 }
-.item9 {
-    margin-top:1vh ;
+.item9modelo {
     height: 12.6vh;
+    margin-top: 20vh;
 }
-.item10 {
-    margin-top:1vh ;
+.item10modelo {
     height: 12.6vh;
+    margin-top: 20vh;
 }
 
 .carteleraLaptop{

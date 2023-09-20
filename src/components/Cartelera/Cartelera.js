@@ -1,15 +1,16 @@
-import React from 'react';
-import './Cartelera.css'; // Importa los estilos CSS si los tienes
+import React, { useState,useEffect  } from 'react';
+import './Cartelera.css';  
+import carteleraImage from '../../assets/r.png'; 
+import carteleraImage2 from '../../assets/OIP.jpeg'; 
+import foto1 from '../../assets/foto1.png';  
+import foto2 from '../../assets/foto2.png';  
+import foto3 from '../../assets/foto3.png';  
+import foto4 from '../../assets/foto4.png';  
 
-// Importa la imagen y el título
-import carteleraImage from '../../assets/r.png'; // Ajusta la ruta de la imagen
-import carteleraImage2 from '../../assets/OIP.jpeg'; // Ajusta la ruta de la imagen
-import foto1 from '../../assets/foto1.png'; // Ajusta la ruta de la imagen
-import foto2 from '../../assets/foto2.png'; // Ajusta la ruta de la imagen
-import foto3 from '../../assets/foto3.png'; // Ajusta la ruta de la imagen
-import foto4 from '../../assets/foto4.png'; // Ajusta la ruta de la imagen
+import { getFirestore, collection, getDocs  } from 'firebase/firestore';  
+import { app } from '../../firebase/firebase';
 
-const titulo = "El Pela Sappe"; // Ajusta el título
+const titulo = "El Pela Sappe";  
 const subtitulo = (
     <>
         Aniversario de la <br />
@@ -38,7 +39,149 @@ const oracion3 = (
     </div>
   );
 
+  const formatDifference = (noticia) => {
+    const { tiempo } = noticia;
+    const seconds = tiempo.seconds;
+    // const nanoseconds = tiempo.nanoseconds;
+  
+    const now = new Date();
+    const date = new Date(seconds * 1000);
+    const differenceInMinutes = Math.floor((now - date) / (1000 * 60));
+  
+    let formattedDifference = '';
+  
+    if (differenceInMinutes < 60) {
+      formattedDifference = `${differenceInMinutes} minutos`;
+    } else if (differenceInMinutes < 1440) {
+      const differenceInHours = Math.floor(differenceInMinutes / 60);
+      formattedDifference = `${differenceInHours} horas`;
+    } else {
+      const differenceInDays = Math.floor(differenceInMinutes / 1440);
+      formattedDifference =
+        differenceInDays === 1 ? '1 día' : `${differenceInDays} días`;
+    }
+    return formattedDifference;
+  }
+
 export const Cartelera = () => {
+
+// busco noticia!!!!!!!
+    const [primerElemento, setPrimerElemento] = useState(''); 
+    const [segundoElemento, setSegundoElemento] = useState('');  
+    const [tercerElemento, setTercerElemento] = useState('');  
+    const [cuartoElemento, setCuartoElemento] = useState(''); 
+    const [quintoElemento, setQuintoElemento] = useState('');  
+    const [sextoElemento, setSextoElemento] = useState('');  
+    const [septimoElemento, setSeptimoElemento] = useState('');  
+    const [octavoElemento, setOctavoElemento] = useState(''); 
+    const [novenoElemento, setNovenoElemento] = useState('');  
+
+    const [noticias, setNoticias] = useState([]); // Un arreglo de noticias
+
+    const db = getFirestore(app);
+    // console.log('Nombre de la base de datos:', db);
+    useEffect(() => {
+
+    const obtenerColecciones = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, 'noticias'));  
+        const noticiasArray  = [];
+        querySnapshot.forEach((doc) => {
+          const data = doc.data();
+          noticiasArray.push(data);  
+        });
+        setNoticias(noticiasArray);
+        
+      } catch (error) {
+        console.error('Error al obtener colecciones:', error);
+      }
+    };
+    obtenerColecciones();
+  }, []); 
+  
+  useEffect(() => {
+    if (noticias.length > 0) {
+         
+      //const primerElemento = noticias[0]; // O puedes usar noticias.find(elemento => elemento.id === 1); si tienes un campo 'id' en tus documentos.
+      const primerElemento = noticias.find(elemento => elemento.id === 1);
+      const primerElementoFormatted = formatDifference(primerElemento);
+
+      const nuevoPrimerElemento = {
+        ...primerElemento,
+        diferenciaDeTiempo: primerElementoFormatted,
+      };
+      setPrimerElemento(nuevoPrimerElemento);
+      
+      const segundoElemento = noticias.find(elemento => elemento.id === 2);
+      const segundoElementoFormatted = formatDifference(segundoElemento);
+
+      const nuevoSegundoElemento = {
+        ...segundoElemento,
+        diferenciaDeTiempo: segundoElementoFormatted,
+      };
+      setSegundoElemento(nuevoSegundoElemento);
+
+      const tercerElemento = noticias.find(elemento => elemento.id === 3);
+      const tercerElementoFormatted = formatDifference(tercerElemento);
+
+      const nuevoTercerElemento = {
+        ...tercerElemento,
+        diferenciaDeTiempo: tercerElementoFormatted,
+      };
+      setTercerElemento(nuevoTercerElemento);
+
+      const cuartoElemento = noticias.find(elemento => elemento.id === 4);
+      const cuartoElementoFormatted = formatDifference(cuartoElemento);
+      const nuevoCuartoElemento = {
+        ...cuartoElemento,
+        diferenciaDeTiempo: cuartoElementoFormatted,
+      };
+      setCuartoElemento(nuevoCuartoElemento);
+
+      const quintoElemento = noticias.find(elemento => elemento.id === 5);
+      const quintoElementoFormatted = formatDifference(quintoElemento);
+      const nuevoQuintoElemento = {
+        ...quintoElemento,
+        diferenciaDeTiempo: quintoElementoFormatted,
+      };
+      setQuintoElemento(nuevoQuintoElemento);
+
+      const sextoElemento = noticias.find(elemento => elemento.id === 6);
+      const sextoElementoFormatted = formatDifference(sextoElemento);
+      const nuevoSextoElemento = {
+        ...sextoElemento,
+        diferenciaDeTiempo: sextoElementoFormatted,
+      };
+      setSextoElemento(nuevoSextoElemento);
+
+      const septimoElemento = noticias.find(elemento => elemento.id === 7);
+      const septimoElementoFormatted = formatDifference(septimoElemento);
+      const nuevoSeptimoElemento = {
+        ...septimoElemento,
+        diferenciaDeTiempo: septimoElementoFormatted,
+      };
+      setSeptimoElemento(nuevoSeptimoElemento); 
+
+      const octavoElemento = noticias.find(elemento => elemento.id === 8);
+      const octavoElementoFormatted = formatDifference(octavoElemento);
+      const nuevoOctavoElemento = {
+        ...octavoElemento,
+        diferenciaDeTiempo: octavoElementoFormatted,
+      };
+      setOctavoElemento(nuevoOctavoElemento); 
+
+      const novenoElemento = noticias.find(elemento => elemento.id === 9);
+      const novenoElementoFormatted = formatDifference(novenoElemento);
+      const nuevoNovenoElemento = {
+        ...novenoElemento,
+        diferenciaDeTiempo: novenoElementoFormatted,
+      };
+      setNovenoElemento(nuevoNovenoElemento); 
+    }
+  }, [noticias]);
+    // busco noticia!!!!!!!
+
+
 // <div class="grid-container">
             //     <div class="item1">1</div>
             //     <div class="item2">2</div>
@@ -81,24 +224,44 @@ export const Cartelera = () => {
                 </div>
                 <p className='tiempo'>25 Feb 2024</p>
             </div>
-             <div class="grid-container">
+             <div className="grid-container">
 
-                <div class="item01"></div>
-                <div class="item02"></div>
-                <div class="item03"></div>
-                <div class="item04"></div>
+                <div className="item01"></div>
+                <div className="item02"></div>
+                <div className="item03"></div>
+                <div className="item04"></div>
 
-                 <div class="item1">
-                    <h6 className='title'>Lorem ipsum</h6>
+                 <div className="item1">
+                  {/* {primerElemento ? (
+                     <>
+                      <h6 className='title'>{primerElemento.titulo}</h6>
+                      <h5 className='subtitle'>{primerElemento.subtitulo}</h5>
+                      <p className='textoParrafo'>{primerElemento.texto}</p>
+                     </>
+                    ) : (
+                      <p>Cargando datos...</p>
+                    )} */}
+                    {/* <h6 className='title'>Lorem ipsum</h6>
                     <h5 className='subtitle'>{oracion3}</h5>
-                    <p className='textoParrafo'>Lorem ipsum  amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</p>
-                    <p className='timePublished ferro'>1 hour ago</p>
+                    <p className='textoParrafo'>Lorem ipsum  amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</p> */}
+                    {/* <p className='timePublished ferro'>1 hour ago</p>   */}
+                    {primerElemento ? (
+                     <>
+                      <h6 className='title'>{primerElemento.titulo}</h6>
+                      <h5 className='subtitle'>{primerElemento.subtitulo}</h5>
+                      <p className='textoParrafo'>{primerElemento.texto}</p>
+                      <p className='timePublished'>{primerElemento.diferenciaDeTiempo}</p>
+                     </>
+                    ) : (
+                      <p>Cargando datos...</p>
+                    )}
                  </div>
-                 <div class="item2 with-border2">
-                    <img className="foto1item2" src={foto1} alt="Kinky Rules pciture" />
+                 <div className="item2 with-border2">
+                    {/* <img className="foto1item2" src={foto1} alt="Kinky Rules pciture" /> */}
+                    <img className="foto1item2" src={primerElemento.foto} alt="Kinky Rules picture" />
                  </div>
-                 <div class="item3">
-                    <h6 className='title' id='titleModified'>Lorem ipsum</h6>
+                 <div className="item3">
+                    {/* <h6 className='title' id='titleModified'>Lorem ipsum</h6>
                         <img className='foto2item3' src={foto3} alt="Cartelera" />          
                         <h5 className='subtitle'>{oracion2}</h5>
                         <p className='textoParrafo'>Lorem ipsum dolor sit amet, consectetuer</p>
@@ -107,41 +270,51 @@ export const Cartelera = () => {
                         <img className='foto4item3' src={foto4} alt="Salta que la vida es una fiesta" />
                         <h5 className='subtitle' id="subtitleModified">{oracion2}</h5>
                         <p className='textoParrafo'>Lorem ipsum dolor sit amet, consectetuer</p>
-                        <p className='timePublished ferro'>25 Feb 2024</p>
+                        <p className='timePublished ferro'>25 Feb 2024</p> */}
+                        <h6 className='title' id='titleModified'>{segundoElemento.titulo}</h6>
+                        <img className='foto2item3' src={segundoElemento.foto} alt="Cartelera" />          
+                        <h5 className='subtitle'>{segundoElemento.subtitulo}</h5>
+                        <p className='textoParrafo'>{segundoElemento.texto}</p>
+                        <p className='timePublished'>{segundoElemento.diferenciaDeTiempo}</p>
+                        <h6 className='title'  id='titleModified2'>{tercerElemento.titulo}</h6>
+                        <img className='foto4item3' src={tercerElemento.foto} alt="Salta que la vida es una fiesta" />
+                        <h5 className='subtitle' id="subtitleModified">{tercerElemento.subtitulo}</h5>
+                        <p className='textoParrafo'>{tercerElemento.texto}</p>
+                        <p className='timePublished'>{tercerElemento.diferenciaDeTiempo}</p>  
                     </div>  
-                 <div class="item4">
-                    <h6 className='title'>Lorem ipsum</h6>
-                    <h5 className='subtitle'>{oracion3}</h5>
-                    <p className='textoParrafo'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh</p>
-                    <p className='timePublished'>2 hours ago</p>
+                 <div className="item4">
+                    <h6 className='title'>{cuartoElemento.titulo}</h6>
+                    <h5 className='subtitle'>{cuartoElemento.subtitulo}</h5>
+                    <p className='textoParrafo'>{cuartoElemento.texto}</p>
+                    <p className='timePublished'>{cuartoElemento.diferenciaDeTiempo}</p>
                  </div>
-                 <div class="item5 with-border">
-                    <img className='foto3item5' src={foto2} alt="A cocochito" />
+                 <div className="item5 with-border">
+                    <img className='foto3item5' src={quintoElemento.foto} alt="A cocochito" />
                  </div>
-                 <div class="item6">
-                    <h6 className='subtitle' id="subtitleItem6Modified">{oracion3}</h6>
-                    <p className='textoParrafo'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed</p>
-                    <p className='timePublished'>Yesterday</p>
+                 <div className="item6">
+                    <h6 className='subtitle' id="subtitleItem6Modified">{quintoElemento.subtitulo}</h6>
+                    <p className='textoParrafo'>{quintoElemento.texto}</p>
+                    <p className='timePublished'>{quintoElemento.diferenciaDeTiempo}</p>
                  </div>
-                 <div class="item7">
-                    <h6>{oracion2}</h6>
-                    <p className='textoParrafo'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh</p>
-                    <p className='timePublished'>25 Feb 2024</p>
+                 <div className="item7">
+                    <h6>{sextoElemento.subtitulo}</h6>
+                    <p className='textoParrafo'>{sextoElemento.texto}</p>
+                    <p className='timePublished'>{sextoElemento.diferenciaDeTiempo}</p>
                  </div>
-                 <div class="item8">
-                    <h6>{oracion2}</h6>
-                    <p className='textoParrafo'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh</p>
-                    <p className='timePublished'>25 Feb 2024</p>
+                 <div className="item8">
+                    <h6>{septimoElemento.subtitulo}</h6>
+                    <p className='textoParrafo'>{septimoElemento.texto}</p>
+                    <p className='timePublished'>{septimoElemento.diferenciaDeTiempo}</p>
                  </div>
-                 <div class="item9">
-                    <h6>{oracion2}</h6>
-                    <p className='textoParrafo'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh</p>
-                    <p className='timePublished'>25 Feb 2024</p>
+                 <div className="item9">
+                    <h6>{octavoElemento.subtitulo}</h6>
+                    <p className='textoParrafo'>{octavoElemento.texto}</p>
+                    <p className='timePublished'>{octavoElemento.diferenciaDeTiempo}</p>
                  </div>
-                 <div class="item10">
-                    <h6>{oracion2}</h6> 
-                    <p className='textoParrafo'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh</p>
-                    <p className='timePublished'>25 Feb 2024</p>
+                 <div className="item10">
+                    <h6>{novenoElemento.subtitulo}</h6> 
+                    <p className='textoParrafo'>{novenoElemento.texto}</p>
+                    <p className='timePublished'>{novenoElemento.diferenciaDeTiempo}</p>
                  </div>
             </div>
             </>

@@ -48,8 +48,8 @@ const Footer = () => {
               </Modal>
         </div>
 
-        <div class="grid-Footer2">
-            <div class="item1footer2">
+        <div className="grid-Footer2">
+            <div className="item1footer2">
                 <ul className="list-unstyled">
                     <li>Terms of Use</li>
                     <li>Privacy</li>
@@ -57,14 +57,14 @@ const Footer = () => {
                 </ul>
             </div>
             
-            <div class="item2footer2">
+            <div className="item2footer2">
                 <ul className="list-unstyled">
                     <li>Manage Cookies</li>
                     <li>Accessibility</li>
                 </ul>
             </div>
 
-            <div class="item3footer2">
+            <div className="item3footer2">
               <ul className="list-unstyled social-icons">
                 <li>
                   <a href="https://www.facebook.com" target="_blank">
@@ -89,12 +89,12 @@ const Footer = () => {
               </ul>
             </div>  
 
-            <div class="item4footer2">
+            <div className="item4footer2">
                 <h6>Subscribite y mantenete informado de las noticias actuales</h6>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam Lorem ipsum dolor sit amet, consectetuer</p>
             </div>
 
-            <div class="item5footer2 btnSubscribe">
+            <div className="item5footer2 btnSubscribe">
                 <button className="btn">Subscribe</button>
             </div>
          </div>
