@@ -199,7 +199,7 @@ export const Cartelera = () => {
             // _________________
     return (
       <>
-            <div>
+            <div className='cartelera-container'>
                 <div>
                     {primerElemento ? (
                      <>
