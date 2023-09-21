@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/teatrify/static/css/main.e0a171c4.css",
-    "main.js": "/teatrify/static/js/main.22d3d7e0.js",
+    "main.js": "/teatrify/static/js/main.2ef96126.js",
     "static/js/787.5820d20b.chunk.js": "/teatrify/static/js/787.5820d20b.chunk.js",
     "static/media/foto1.png": "/teatrify/static/media/foto1.278b9b863d0e3525f3e1.png",
     "static/media/r.png": "/teatrify/static/media/r.ec3a8b6e2da50bb8599b.png",
@@ -27,11 +27,11 @@
     "static/media/logo.svg": "/teatrify/static/media/logo.09ab20216b13ed0a245136c08655fca2.svg",
     "static/media/coleccion2.txt": "/teatrify/static/media/coleccion2.2d1b6fa53ae8e662e732.txt",
     "main.e0a171c4.css.map": "/teatrify/static/css/main.e0a171c4.css.map",
-    "main.22d3d7e0.js.map": "/teatrify/static/js/main.22d3d7e0.js.map",
+    "main.2ef96126.js.map": "/teatrify/static/js/main.2ef96126.js.map",
     "787.5820d20b.chunk.js.map": "/teatrify/static/js/787.5820d20b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e0a171c4.css",
-    "static/js/main.22d3d7e0.js"
+    "static/js/main.2ef96126.js"
   ]
 }
